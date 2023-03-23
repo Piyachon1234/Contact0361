@@ -5,7 +5,7 @@ var express = require('express')
   app = express()
   port = process.env.PORT || 3000
   mongoose = require('mongoose')
-  User = require('./api/models/contactModel')
+  User = require('./models/contactModel')
   bodyParser = require('body-parser')
 
   const cors = require('cors');
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/contactRoutes')
+var routes = require('./routes/contactRoutes')
 routes(app)
 
 app.listen(port)

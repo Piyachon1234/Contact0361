@@ -81,7 +81,7 @@ export default {
   methods: {
     async Login() {
   try {
-    const response = await axios.post("http://127.0.0.1:3000/login", {
+    const response = await axios.post("http://27.55.80.34:3000/login", {
       username: this.user.username,
       password: md5(this.user.password),
     });
