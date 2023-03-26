@@ -63,7 +63,7 @@ export default {
   methods: {
     loadContacts() {
       axios
-        .get("http://127.0.0.1:3000/contact")
+        .get("https://contact0361-be.herokuapp.com/contact")
         .then((response) => {
           this.contacts = response.data;
         })
@@ -77,7 +77,7 @@ export default {
         return;
       }
       axios
-        .get(`http://127.0.0.1:3000/contact/search/${this.user.search}`)
+        .get(`https://contact0361-be.herokuapp.com/contact/search/${this.user.search}`)
         .then((response) => {
           this.contacts = response.data;
         })
@@ -91,7 +91,7 @@ export default {
 
     deleteData(UserId) {
       axios
-        .delete("http://127.0.0.1:3000/contact/delete/" + UserId)
+        .delete("https://contact0361-be.herokuapp.com/contact/delete/" + UserId)
         .then((response) => {
           console.log("Delete User Id: " + UserId);
         })

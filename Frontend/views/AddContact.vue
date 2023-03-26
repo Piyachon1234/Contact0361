@@ -78,7 +78,7 @@ export default {
       };
       console.log(newContact);
       axios
-        .post("http://127.0.0.1:3000/contact", newContact)
+        .post("https://contact0361-be.herokuapp.com/contact", newContact)
         .then((response) => {
           console.log(response);
           this.$router.push("/contact-list");

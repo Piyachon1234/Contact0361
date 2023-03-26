@@ -59,7 +59,7 @@ export default {
     loadContact() {
       const contactId = this.$route.params.contactId;
       axios
-        .get(`http://127.0.0.1:3000/contact/${contactId}`)
+        .get(`https://contact0361-be.herokuapp.com/contact/${contactId}`)
         .then((response) => {
           this.contact = response.data;
         })
@@ -76,7 +76,7 @@ export default {
   });
 
   axios
-    .put(`http://127.0.0.1:3000/contact/update/` + this.$route.params.contactId, this.contact)
+    .put(`https://contact0361-be.herokuapp.com/contact/update/` + this.$route.params.contactId, this.contact)
     .then(() => {
       this.$router.push("/contact-list");
     })
